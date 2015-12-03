@@ -19,7 +19,7 @@ import javax.persistence.Table;
 public class RequestBean implements Serializable {
 
     private static final long serialVersionUID = 8407192321350802007L;
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "request_id")
@@ -59,11 +59,11 @@ public class RequestBean implements Serializable {
     @Column(name = "request_auth_type")
     private String authType;
     @Column(name = "request_charactect_encoding")
-    private String characterEncoding;   
+    private String characterEncoding;
     @Column(name = "request_locale")
     private String locale;
     @Column(name = "request_parameter_names", columnDefinition = "text")
-    private String parameterNames;    
+    private String parameterNames;
     @Column(name = "request_user_agent")
     private String userAgent;
     @Column(name = "request_accept_encoding")
@@ -76,7 +76,6 @@ public class RequestBean implements Serializable {
     private String connection;
     @Column(name = "request_date")
     private String date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-    
 
     public long getId() {
         return id;
